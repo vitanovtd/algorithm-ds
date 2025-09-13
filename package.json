@@ -1,0 +1,23 @@
+{
+  "name": "algorithms-and-dt",
+  "version": "1.0.0",
+  "main": "LinkedList.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitanovtd/algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitanovtd/algorithms/issues"
+  },
+  "homepage": "https://github.com/vitanovtd/algorithms#readme",
+  "description": "",
+  "dependencies": {
+    "jest": "^30.1.3"
+  }
+}
