@@ -15,8 +15,7 @@ test("prepend adds to head", () => {
   expect(list.getTail().value).toBe(2);
 });
 
-
-test('at(index)', () => {
+test("at(index)", () => {
   const list = new LinkedList([0, 1, 2]);
   expect(list.at(0).value).toBe(0);
   expect(list.at(1).value).toBe(1);
@@ -25,7 +24,7 @@ test('at(index)', () => {
   expect(list.at(3)).toBeNull();
 });
 
-test('pop removes and returns the tail node', () => {
+test("pop removes and returns the tail node", () => {
   const list = new LinkedList([0, 1, 2]);
   const out = list.pop();
   expect(out.value).toBe(2);
@@ -33,7 +32,7 @@ test('pop removes and returns the tail node', () => {
   expect(list.getTail().value).toBe(1);
 });
 
-test('pop handles single-element and empty lists', () => {
+test("pop handles single-element and empty lists", () => {
   const one = new LinkedList([42]);
   const out1 = one.pop();
   expect(out1.value).toBe(42);
@@ -45,7 +44,7 @@ test('pop handles single-element and empty lists', () => {
   expect(empty.pop()).toBeNull();
 });
 
-test('contains and find work with default comparator', () => {
+test("contains and find work with default comparator", () => {
   const list = new LinkedList([5, 6, 7]);
   expect(list.contains(6)).toBe(true);
   expect(list.contains(9)).toBe(false);
@@ -54,22 +53,22 @@ test('contains and find work with default comparator', () => {
   expect(list.find(9)).toBe(-1);
 });
 
-test('contains', () => {
+test("contains", () => {
   const list = new LinkedList([{ id: 1 }, { id: 2 }]);
   const equals = (a, b) => a.id === b.id;
   expect(list.contains({ id: 2 }, equals)).toBe(true);
   expect(list.contains({ id: 3 }, equals)).toBe(false);
 });
 
-test('toString lists values and ends with null', () => {
+test("toString lists values and ends with null", () => {
   const list = new LinkedList([1, 2]);
   const s = list.toString();
-  expect(s.endsWith('null')).toBe(true);
-  expect(s).toContain('1');
-  expect(s).toContain('2');
+  expect(s.endsWith("null")).toBe(true);
+  expect(s).toContain("1");
+  expect(s).toContain("2");
 });
 
-test('insertAt inserts at head, middle, and tail; returns true/false', () => {
+test("insertAt inserts at head, middle, and tail; returns true/false", () => {
   const list = new LinkedList([1, 3]);
   expect(list.insertAt(0, 0)).toBe(true);
   expect(list.getHead().value).toBe(0);
@@ -84,7 +83,7 @@ test('insertAt inserts at head, middle, and tail; returns true/false', () => {
   expect(list.insertAt(99, list.size() + 1)).toBe(false);
 });
 
-test('removeAt removes head, middle, tail', () => {
+test("removeAt removes head, middle, tail", () => {
   const list = new LinkedList([0, 1, 2, 3]);
 
   const firstValue = list.removeAt(0);
@@ -103,7 +102,7 @@ test('removeAt removes head, middle, tail', () => {
   expect(list.removeAt(list.size())).toBeNull();
 });
 
-test('clear the list', () => {
+test("clear the list", () => {
   const list = new LinkedList([1, 2, 3]);
   list.clear();
   expect(list.size()).toBe(0);
@@ -111,7 +110,7 @@ test('clear the list', () => {
   expect(list.getTail()).toBeNull();
 });
 
-test('iterator ', () => {
+test("iterator ", () => {
   const list = new LinkedList([1, 2, 3]);
   expect([...list]).toEqual([1, 2, 3]);
 });

@@ -1,5 +1,3 @@
-// implement factory function of node
-
 const Node = (value = null, nextNode = null) => ({ value, nextNode });
 
 class LinkedList {
